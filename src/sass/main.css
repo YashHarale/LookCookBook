@@ -321,10 +321,10 @@ body {
 }
 
 .header__logo {
-  margin-left: 5px;
+  /* margin-left: 5px; */
   height: 4.6rem;
   display: block;
-  margin-right: 30px;
+  margin-right: 300px;
 }
 
 .search {
