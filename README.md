@@ -8,7 +8,7 @@
 ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-<!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://lookcookbook-yashharale.netlify.app/">
