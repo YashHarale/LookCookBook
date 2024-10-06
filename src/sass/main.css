@@ -49,7 +49,7 @@ body {
       grid-template-rows: 10rem minmax(100rem, auto);
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
-      grid-template-areas: 'head head' 'list recipe';
+      grid-template-areas: 'head head' 'list recipe';
 }
 
 @media only screen and (max-width: 78.15em) {
