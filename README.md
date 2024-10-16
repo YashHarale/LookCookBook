@@ -80,11 +80,10 @@ LookCookBook is a recipe web app using the [Forkify API](https://forkify-api.her
 - JavaScript
 - Parcel
 - Babel
-- Forkify API
-- Libraries
-  - fractional
-  - Node.js (working on it)
-  - MongoDB (working on it)
+- Recipe API
+- Fracty
+- Go  (working on it)
+- MYSQL (working on it)
     
 
 ---
