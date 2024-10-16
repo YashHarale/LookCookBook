@@ -128,7 +128,7 @@ npm start
 #### Tree structure
 
 ```
-forkify
+LookCookBook
 │   .gitignore
 │   .prettierrc
 │   index.html
