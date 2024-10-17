@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="Login.js"></script>
     <!-- <link rel="stylesheet" href="Login.css"> -->
 </head>
 <body class="bg-orange-300 flex items-center justify-center min-h-screen">
 
-    <!-- Authentication Form -->
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <!-- Authentication Form -->
+      <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Login</h2>
         
-        <form action="#" method="POST">
+        <form id="authForm" action="#" method="POST">
             <!-- Email Input -->
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
                 <input type="email" id="email" name="email" required
                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <p id="emailError" class="text-red-500 text-sm hidden">Please enter a valid email address</p>
             </div>
 
             <!-- Password Input -->
-            <div class="mb-6">
-                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                <input type="password" id="password" name="password" required
-                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <div class="mb-6 relative">
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input type="password" id="password" name="password" required minlength="8" 
+           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+           focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    
+          <!-- Eye icon (hidden initially) -->
+         <span id="togglePassword" class="absolute right-3 top-7 cursor-pointer hidden">
+           👁️
+         </span>
             </div>
+
 
             <!-- Remember Me -->
             <div class="flex items-center justify-between mb-6">
@@ -46,7 +53,7 @@
 
             <!-- Submit Button -->
             <div>
-                <button type="submit"
+                <button type="submit" id="submitBtn"
                         class="w-full bg-orange-600 text-white px-4 py-2 rounded-md shadow hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
                     Sign in
                 </button>
@@ -56,9 +63,9 @@
         <!-- Footer Links -->
         <p class="mt-6 text-center text-sm text-gray-600">
             Don't have an account? 
-            <a href="#" class="font-medium text-orange-600 hover:text-orange-500">Sign up</a>
+            <a href="#" id="sign_up" class="font-medium text-orange-600 hover:text-orange-500">Sign up</a>
         </p>
     </div>
-
 </body>
+<script src="Login.js"></script>
 </html>
