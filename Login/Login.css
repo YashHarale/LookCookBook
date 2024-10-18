@@ -1,0 +1,21 @@
+@import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
+
+/* Custom styles */
+
+
+ /* @import 'tailwindcss/base';
+ @import 'tailwindcss/components';
+ @import 'tailwindcss/utilities';
+
+
+  .auth-form {
+    @apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4;
+}
+
+ .auth-input {
+   @apply border border-gray-300 rounded py-2 px-3 mb-4 w-full;
+ }
+
+ .auth-button {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+ } */
