@@ -84,6 +84,14 @@ signUp.addEventListener('click', function (event) {
                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                 <p id="emailError" class="text-red-500 text-sm hidden">Please enter a valid email address</p>
             </div>
+            <!-- Email Input -->
+
+            <div class="mb-4">
+                <label for="signup-email" class="block text-sm font-medium text-gray-700">User Name</label>
+                <input type="text" id="name" name="First Name" required
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+
+            </div>
 
             <!-- Create Password Input -->
             <div class="mb-4 relative">
@@ -138,24 +146,25 @@ signUp.addEventListener('click', function (event) {
 
             <!-- Remember Me -->
             <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center">
-                    <input id="remember_me" name="remember_me" type="checkbox"
-                           class="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded">
-                    <label for="remember_me" class="ml-2 block text-sm text-gray-900">
-                        Remember me
-                    </label>
-                </div>
+             <div class="flex items-center">
+               <input id="remember_me" name="remember_me" type="checkbox"
+               class="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded">
+               <label for="remember_me" class="ml-2 block text-sm text-gray-900">
+            Remember me
+               </label>
 
-                <div class="text-sm">
-                    <a href="#" class="font-medium text-orange-600 hover:text-orange-500">Forgot your password?</a>
-                </div>
+            </div>
+             <div class="text-sm">
+             <a href="#" class="font-medium text-orange-600 hover:text-orange-500">Forgot your password?</a>
+             </div>
+            </div>
 
             <!-- Submit Button -->
-            <div>
-                <button type="submit" id="submitBtn"
-                        class="w-full bg-orange-600 text-white px-4 py-2 rounded-md shadow hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
-                    Sign in
-                </button>
+            <div class="mb-6">
+              <button type="submit" id="submitBtn"
+             class="w-full bg-orange-600 text-white px-4 py-2 rounded-md shadow hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+            Sign in
+              </button>
             </div>
         `;
 
