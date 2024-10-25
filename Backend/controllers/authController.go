@@ -11,11 +11,12 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+// Doubt
 var jwtKey = []byte("secret_key")
 
 // Signup function
 func Signup(db *sql.DB) gin.HandlerFunc {
-	return func(c *gin.Context) {
+	return func(c *gin.Context) { //Doubt - what is "c *gin.Context"
 		var user models.User
 		if err := c.ShouldBindJSON(&user); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -47,26 +48,28 @@ func Signin(db *sql.DB) gin.HandlerFunc {
 		var user models.User
 		var dbUser models.User
 
+		// Doubt - entire condition
 		if err := c.ShouldBindJSON(&user); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 			return
 		}
 
 		// Fetch user from the database
+		// Question - are we only comparing/checking for email in this query
 		err := db.QueryRow("SELECT id, username, email, password FROM users WHERE email=?", user.Email).Scan(&dbUser.ID, &dbUser.Username, &dbUser.Email, &dbUser.Password)
 		if err != nil {
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid credentials"})
 			return
 		}
 
-		// Compare password
+		// Compare password (question - does bcrypt convert the hash into pass in order to compare it with the password or is it vice versa)
 		err = bcrypt.CompareHashAndPassword([]byte(dbUser.Password), []byte(user.Password))
 		if err != nil {
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid credentials"})
 			return
 		}
 
-		// Generate JWT
+		// Generate JWT  // Claims are information that an identity provider states about a user in the token they issue for that user.
 		token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 			"username": dbUser.Username,
 			"exp":      time.Now().Add(time.Hour * 24).Unix(),
@@ -83,6 +86,7 @@ func Signin(db *sql.DB) gin.HandlerFunc {
 }
 
 // Protected route
+// Doubt about protected route
 func Protected(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Welcome to the protected route!"})
 }
